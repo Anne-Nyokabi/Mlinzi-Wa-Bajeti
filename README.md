@@ -80,7 +80,7 @@ To run Mlinzi wa Bajeti locally:
 *   **Anne Mwema**: Data Scientist
 *   **Faith Mwikali**: Developer
 
-*   **Stephanie Makuri**: DevOps
+*   **Stephanie Makori**: DevOps
 *   **Fauzan Said**: Cloud Engineer
 
 *   **James Munyoki**: Developer
