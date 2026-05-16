@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-gov-green: #0A5C36;
+  --color-gold-alert: #F5C518;
+  --color-off-white: #F9F6EF;
+  --color-charcoal: #1A1A2E;
+  
+  --animate-ticker: ticker 30s linear infinite;
+  --animate-pulse-red: pulse-red 2s infinite;
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-off-white text-charcoal font-sans;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-mono uppercase tracking-tight;
+  }
+}
+
+@layer components {
+  .brutal-border {
+    @apply border-2 border-charcoal;
+  }
+
+  .grid-stat {
+    @apply p-4 border-r-2 border-charcoal flex flex-col justify-center items-center transition-colors;
+  }
+
+  .status-critical { @apply bg-red-500 text-white border-2 border-charcoal; }
+  .status-warning { @apply bg-gold-alert text-charcoal border-2 border-charcoal; }
+  .status-on-track { @apply bg-green-500 text-white border-2 border-charcoal; }
+}
